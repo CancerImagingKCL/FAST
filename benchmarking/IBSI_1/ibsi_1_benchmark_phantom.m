@@ -5,20 +5,14 @@
 %
 % Assuming you have cloned or downloaded the repository as-is, and your 
 % current working directory is the top-level of it (i.e., FAST), then the
-% addpath commands below should work, as should the file path for image 
-% import  Otherwise, you'll have to do the directory-adding and specify the
-% file paths yourself. 
+% file paths for image import will work. Otherwise, you'll have to do the 
+% directory-adding and specify the file paths yourself. 
 %
 % FAST, created and maintained by the Department of Cancer Imaging, King's
 % College London, is provided under a BSD 3-Clause license, the details of
 % which can be found in "LICENSE", in this repository.
 %
-%% STEP 1: FUNCTION PATHS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% add all in the repository to the path
-addpath(genpath(pwd));
-
-%% STEP 2: IMPORT PHANTOM AND MASK %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% STEP 1: IMPORT PHANTOM AND MASK %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % default location for the phantom (in this repository — change it yourself
 % if it is located elsewhere).
@@ -30,7 +24,7 @@ maskPath = './benchmarking/IBSI_1/images/ibsi_1_digital_phantom/nifti/mask/mask.
 [image,info] = import_image_phantom(imagePath);
 mask = import_image_phantom(maskPath);
 
-%% STEP 3: INTENSITY-BASED STATISTICAL FEATURES %%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% STEP 2: INTENSITY-BASED STATISTICAL FEATURES %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % the vector returned here, "intensityStatsFeatures", contains the
 % intensity-based statistical features of IBSI 1, in this order:
