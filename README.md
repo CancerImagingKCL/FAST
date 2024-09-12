@@ -30,7 +30,7 @@ so that images and masks are in their own folders, each one a subfolder of a par
 Then, to begin the project, importing the files as saving them as .mat files, type `start_fast_project` in the command window (the same way `fast_startup` was done, earlier). You'll be asked to find or create an empty folder, in which the folder structure defined above will be replicated, and the images and masks saved as .mat files — choose somewhere sensible and convenient for this folder, as you'll need its location for all subsequent steps. You will also be asked to locate the scans folder — this should be the top-level folder of your data, so, in the example above, this would be "example_fast_folder_structure". 
 
 ## UTILITIES
-In this section, there are Matlab functions/scripts for the jobs you'll need to do frequently, for any processing and analysis pipeline. Things such as loading images and regions of interest (ROIs), or calculating diagnostic measures of image data, and resampling and resegmentation. Each distinct functionality is documented below, with instructions on how to use them.
+In this section, there are Matlab functions and scripts for the jobs you'll need to do frequently, for any processing and analysis pipeline. Things such as loading images and regions of interest (ROIs), or calculating diagnostic measures of image data, and resampling and resegmentation. Each distinct functionality is documented below, with instructions on how to use them.
 
 ### Image and ROI import
 

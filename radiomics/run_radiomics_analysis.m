@@ -63,20 +63,15 @@ else
 end
 
 % check if input images are mat files
-% if they've been resegmented or resampled, they would have been saved that
-% way.
-% if not, they will most likely be dicom files.
-folderContents = dir(imgPath);
-folderContents = {folderContents.name}';
-folderContents(ismember(folderContents,{'.','..'})) = [];
-folderContents(ismember(folderContents,{'.DS_Store','._.DS_Store'})) = [];
+folderContents = trim_dir_entries(imgPath);
 firstFile = folderContents{1,1};
 [~,~,fileExt] = fileparts(firstFile);
 
-% if they're not .mat, then ask user to make a new folder and convert them
+% if they're not .mat, then ask user to convert them first
 if ~(strcmp(fileExt,'.mat'))
-    matSavePath = save_image_as_mat_warning();
-    convert_dicom_to_mat(inputPath,inputFile,outputPath,outputFile)
+    % use start_fast_project
+    %matSavePath = save_image_as_mat_warning();
+    %convert_dicom_to_mat(inputPath,inputFile,outputPath,outputFile)
 
 end
 

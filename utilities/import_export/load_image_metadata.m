@@ -31,10 +31,7 @@ function [imageMetaData,slicePos,sliceUIDs,sortedSliceInstanceNumbers] =...
     load_image_metadata(imagePath,numSlicesToLoad)
 
 % load the image metadata, slice-by-slice
-sliceFiles = dir(imagePath);
-sliceFiles = {sliceFiles.name}';
-sliceFiles(ismember(sliceFiles,{'.','..'})) = [];
-sliceFiles(ismember(sliceFiles,{'.DS_Store','._.DS_Store'})) = [];
+sliceFiles = trim_dir_entries(imagePath);
 if isempty(numSlicesToLoad)
     nSlices = length(sliceFiles);
 else

@@ -40,10 +40,7 @@ while ~(emptyCheck)
     saveFolder = uigetdir('','Select or create empy folder.');
 
     % check it is empty!
-    folderContents = dir(saveFolder);
-    folderContents = {folderContents.name}';
-    folderContents(ismember(folderContents,{'.','..'})) = [];
-    folderContents(ismember(folderContents,{'.DS_Store','._.DS_Store'})) = [];
+    folderContents = trim_dir_entries(saveFolder);
     
     if size(folderContents,1) == 0
         emptyCheck = true;

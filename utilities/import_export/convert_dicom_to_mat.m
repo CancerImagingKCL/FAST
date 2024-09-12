@@ -1,4 +1,4 @@
-% SAVE_IMAGE_AS_MAT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CONVERT_DICOM_TO_MAT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % For loading a dicom image, and saving it as a .mat file. 
 %

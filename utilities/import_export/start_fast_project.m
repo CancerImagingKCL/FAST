@@ -17,7 +17,7 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function start_fast_project
+function start_fast_project()
 
 % ask the user to find/create an empty folder for the images
 projectFolder = save_image_as_mat_warning();
@@ -28,4 +28,8 @@ uiwait(inputFldrDlg);
 inputFolder = uigetdir('','Scans folder');
 
 % check the folder structure is correct
+% TODO: make try/catch block
+folderCheck = check_input_folder_structure(inputFolder);
 
+% if inputs are structured properly, then convert the images
+convert_dicom_to_mat(inputPath,inputFile,outputPath,outputFile)
